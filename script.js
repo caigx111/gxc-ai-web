@@ -129,6 +129,6 @@ if (typeof localStorage !== 'undefined') {
 }
 
 // 添加一些互动提示
-console.log('👋 欢迎来到 gxc.ai！');
+console.log('👋 欢迎来到 gxc.ai');
 console.log('💡 这是一个个人网站，用于分享读书心得和旅行笔记');
 console.log('🚀 网站正在开发中...');
