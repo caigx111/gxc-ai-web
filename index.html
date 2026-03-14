@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gxc.ai - 个人主页</title>
+    <title>gxc.ai - 算法工程师 · 数学爱好者</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <div class="logo">
-                <a href="index.html"></a>
+                <a href="index.html">gxc.ai</a>
             </div>
             <ul class="nav-links">
                 <li><a href="#about">关于我</a></li>
-                <li><a href="#books">读书心得</a></li>
-                <li><a href="#travels">旅行笔记</a></li>
+                <li><a href="#tech">技术</a></li>
+                <li><a href="#reading">读书</a></li>
+                <li><a href="#essays">随笔</a></li>
                 <li><a href="#contact">联系</a></li>
             </ul>
         </nav>
@@ -27,11 +29,37 @@
     <main>
         <section id="hero" class="hero">
             <div class="hero-content">
-                <h1>欢迎来到 cgx.world</h1>
-                <p>分享读书心得，记录旅行故事</p>
-                <div class="hero-buttons">
-                    <a href="#books" class="btn btn-primary">探索读书世界</a>
-                    <a href="#travels" class="btn btn-secondary">浏览旅行故事</a>
+                <div class="hero-text">
+                    <h1>gxc.ai</h1>
+                    <p class="hero-subtitle">AI算法工程师 · 数学爱好者 · 终身学习者</p>
+                    <div class="hero-tags">
+                        <span class="tag">机器学习</span>
+                        <span class="tag">深度学习</span>
+                        <span class="tag">数学</span>
+                        <span class="tag">阅读</span>
+                        <span class="tag">思考</span>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#tech" class="btn btn-primary">技术世界</a>
+                        <a href="#reading" class="btn btn-secondary">思想空间</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-snippet">
+                        <pre><code>def life_algorithm():
+    # 核心参数
+    curiosity = ∞
+    learning_rate = 0.01
+    epochs = 'lifetime'
+    
+    while curiosity > 0:
+        explore(technology, books, thoughts)
+        think(critically, deeply)
+        share(insights)
+        curiosity *= 0.99
+    
+    return wisdom</code></pre>
+                    </div>
                 </div>
             </div>
         </section>
@@ -41,71 +69,435 @@
                 <h2>关于我</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>你好！我是 gxc.ai，一个热爱阅读、旅行和思考的探索者。</p>
-                        <p>在这里，我分享我的读书心得和旅行笔记，记录生活中的思考和感悟。希望通过我的分享，能够与你交流，一起在这个美好的世界中探索和学习。</p>
+                        <p>你好！我是 gxc，一名AI算法工程师，数学专业背景。</p>
+                        <p>目前在国内头部科技公司从事机器学习和深度学习相关的研究与开发工作。热爱用数学和代码解决复杂的现实问题。</p>
+                        <p>在技术之外，我更是一个终身学习者。喜欢阅读各类书籍，从哲学思辨到历史长河，从文学经典到经济规律，每一本书都是一次思想的旅行。</p>
+                        <p>我相信技术与人文的结合能够创造更大的价值。在这里，我记录技术探索、读书感悟和生活思考。</p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <strong>5+</strong>
+                                <span>年算法工程经验</span>
+                            </div>
+                            <div class="stat">
+                                <strong>50+</strong>
+                                <span>年读书量</span>
+                            </div>
+                            <div class="stat">
+                                <strong>∞</strong>
+                                <span>好奇心</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="about-image">
-                        <img src="images/personal/cgx.png" alt="个人照片">
+                    <div class="about-skills">
+                        <h3>技术栈</h3>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>机器学习</h4>
+                                <div class="skill-tags">
+                                    <span>TensorFlow</span>
+                                    <span>PyTorch</span>
+                                    <span>Scikit-learn</span>
+                                    <span>XGBoost</span>
+                                    <span>LightGBM</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>编程语言</h4>
+                                <div class="skill-tags">
+                                    <span>Python</span>
+                                    <span>C++</span>
+                                    <span>R</span>
+                                    <span>SQL</span>
+                                    <span>Julia</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>数学基础</h4>
+                                <div class="skill-tags">
+                                    <span>线性代数</span>
+                                    <span>概率统计</span>
+                                    <span>最优化</span>
+                                    <span>信息论</span>
+                                    <span>微分方程</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>工程能力</h4>
+                                <div class="skill-tags">
+                                    <span>Docker</span>
+                                    <span>Kubernetes</span>
+                                    <span>Spark</span>
+                                    <span>Kafka</span>
+                                    <span>Redis</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="books" class="books">
+        <section id="tech" class="tech">
             <div class="container">
-                <h2>读书心得</h2>
-                <div class="books-grid">
-                    <div class="book-card">
-                        <div class="book-cover">
-                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=200&h=300&fit=crop" alt="人类简史封面">
+                <h2>技术思考</h2>
+                <div class="tech-intro">
+                    <p>在算法的世界里，我不仅仅是在写代码，更是在用数学的精确性去理解世界的复杂性。这里记录我在技术道路上的思考、探索和感悟。</p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-brain"></i>
                         </div>
+                        <div class="tech-content">
+                            <h3>深度学习前沿</h3>
+                            <p class="tech-date">2024年3月</p>
+                            <p class="tech-summary">探讨Transformer架构的数学本质，以及自注意力机制如何捕捉序列数据中的长距离依赖关系。从BERT到GPT，理解大语言模型的演进逻辑。</p>
+                            <a href="#" class="read-more">深度阅读</a>
+                        </div>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="tech-content">
+                            <h3>概率图模型实践</h3>
+                            <p class="tech-date">2024年2月</p>
+                            <p class="tech-summary">贝叶斯网络在工业级推荐系统中的应用，以及如何处理高维稀疏数据的概率建模。从理论到落地的完整实践。</p>
+                            <a href="#" class="read-more">案例解析</a>
+                        </div>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="tech-content">
+                            <h3>强化学习探索</h3>
+                            <p class="tech-date">2024年1月</p>
+                            <p class="tech-summary">从马尔可夫决策过程到深度强化学习，如何让机器学会在复杂环境中做出最优决策。DQN、PPO等算法的深入剖析。</p>
+                            <a href="#" class="read-more">理论实践</a>
+                        </div>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="tech-content">
+                            <h3>图神经网络应用</h3>
+                            <p class="tech-date">2023年12月</p>
+                            <p class="tech-summary">GNN在社交网络分析、知识图谱构建中的应用。从GCN到GraphSAGE，理解图结构数据的表示学习。</p>
+                            <a href="#" class="read-more">技术详解</a>
+                        </div>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="tech-content">
+                            <h3>大规模数据处理</h3>
+                            <p class="tech-date">2023年11月</p>
+                            <p class="tech-summary">面对TB级数据的机器学习实践。分布式训练、特征工程优化、模型压缩等技术的实战经验分享。</p>
+                            <a href="#" class="read-more">工程实践</a>
+                        </div>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="tech-content">
+                            <h3>AI安全与伦理</h3>
+                            <p class="tech-date">2023年10月</p>
+                            <p class="tech-summary">探讨机器学习模型的公平性、可解释性和鲁棒性。如何在追求性能的同时保证AI系统的可信度。</p>
+                            <a href="#" class="read-more">深度思考</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-projects">
+                    <h3>精选项目</h3>
+                    <div class="projects-list">
+                        <div class="project-item">
+                            <h4>🎯 智能推荐系统优化</h4>
+                            <p>基于深度学习的个性化推荐算法，融合用户行为序列建模和内容理解，将CTR提升15%，GMV增长23%。</p>
+                            <div class="project-tech">
+                                <span>PyTorch</span>
+                                <span>Transformer</span>
+                                <span>Redis</span>
+                                <span>Kafka</span>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <h4>📊 时序数据预测平台</h4>
+                            <p>结合LSTM和注意力机制的时间序列预测模型，支持多尺度预测和不确定性量化，应用于销量预测和异常检测。</p>
+                            <div class="project-tech">
+                                <span>TensorFlow</span>
+                                <span>Prophet</span>
+                                <span>Docker</span>
+                                <span>FastAPI</span>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <h4>🔍 异常检测算法</h4>
+                            <p>无监督学习在金融风控中的创新应用，结合孤立森林和自编码器，实现实时欺诈检测，准确率提升至96%。</p>
+                            <div class="project-tech">
+                                <span>Scikit-learn</span>
+                                <span>Spark</span>
+                                <span>ELK</span>
+                                <span>Airflow</span>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <h4>🗣️ 自然语言理解系统</h4>
+                            <p>基于预训练语言模型的文本分类和情感分析系统，支持多语言和领域自适应，应用于客服智能质检。</p>
+                            <div class="project-tech">
+                                <span>BERT</span>
+                                <span>HuggingFace</span>
+                                <span>Kubernetes</span>
+                                <span>gRPC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reading" class="reading">
+            <div class="container">
+                <h2>读书笔记</h2>
+                <div class="reading-intro">
+                    <p>阅读是我与世界对话的方式，从数学的严谨到哲学的思辨，从历史的厚重到文学的温度，每一本书都为我打开了新的思考维度。</p>
+                    <div class="reading-categories">
+                        <div class="category active" onclick="filterBooks('all')">
+                            <i class="fas fa-th-large"></i>
+                            <span>全部</span>
+                        </div>
+                        <div class="category" onclick="filterBooks('math')">
+                            <i class="fas fa-square-root-alt"></i>
+                            <span>数学</span>
+                        </div>
+                        <div class="category" onclick="filterBooks('philosophy')">
+                            <i class="fas fa-brain"></i>
+                            <span>哲学</span>
+                        </div>
+                        <div class="category" onclick="filterBooks('history')">
+                            <i class="fas fa-landmark"></i>
+                            <span>历史</span>
+                        </div>
+                        <div class="category" onclick="filterBooks('literature')">
+                            <i class="fas fa-book-open"></i>
+                            <span>文学</span>
+                        </div>
+                        <div class="category" onclick="filterBooks('economics')">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>经济</span>
+                        </div>
+                        <div class="category" onclick="filterBooks('tech')">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>科技</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="books-grid" id="booksGrid">
+                    <div class="book-card" data-category="math">
                         <div class="book-info">
+                            <div class="book-category">数学</div>
+                            <h3>模式识别与机器学习</h3>
+                            <p class="book-author">Christopher Bishop</p>
+                            <p class="book-summary">贝叶斯方法的经典之作，将复杂的机器学习算法用数学的精确性完美诠释。从概率论基础到图模型，系统而深入。</p>
+                            <div class="book-rating">★★★★★</div>
+                            <a href="#" class="read-more">深度思考</a>
+                        </div>
+                    </div>
+                    <div class="book-card" data-category="math">
+                        <div class="book-info">
+                            <div class="book-category">数学</div>
+                            <h3>线性代数应该这样学</h3>
+                            <p class="book-author">Sheldon Axler</p>
+                            <p class="book-summary">摒弃行列式，从向量空间和线性映射的角度重新理解线性代数。对理解机器学习中的降维和特征提取非常有帮助。</p>
+                            <div class="book-rating">★★★★★</div>
+                            <a href="#" class="read-more">数学之美</a>
+                        </div>
+                    </div>
+                    <div class="book-card" data-category="philosophy">
+                        <div class="book-info">
+                            <div class="book-category">哲学</div>
+                            <h3>存在与时间</h3>
+                            <p class="book-author">马丁·海德格尔</p>
+                            <p class="book-summary">关于"此在"的深刻思考，对技术时代人类处境的哲学反思。难读但值得，每一次阅读都有新的领悟。</p>
+                            <div class="book-rating">★★★★☆</div>
+                            <a href="#" class="read-more">哲学思辨</a>
+                        </div>
+                    </div>
+                    <div class="book-card" data-category="philosophy">
+                        <div class="book-info">
+                            <div class="book-category">哲学</div>
+                            <h3>沉思录</h3>
+                            <p class="book-author">马可·奥勒留</p>
+                            <p class="book-summary">罗马皇帝的私人日记，斯多葛哲学的经典。关于如何面对命运、保持内心平静的智慧，放在今天依然适用。</p>
+                            <div class="book-rating">★★★★★</div>
+                            <a href="#" class="read-more">人生智慧</a>
+                        </div>
+                    </div>
+                    <div class="book-card" data-category="history">
+                        <div class="book-info">
+                            <div class="book-category">历史</div>
                             <h3>人类简史</h3>
                             <p class="book-author">尤瓦尔·赫拉利</p>
-                            <p class="book-summary">从十万年前有生命迹象开始到21世纪资本、科技交织的人类发展史，彻底改变我对人类历史的认知。</p>
-                            <a href="books/sample-book.html" class="read-more">阅读更多</a>
+                            <p class="book-summary">从认知革命到科技革命，用宏观视角审视人类发展历程。颠覆性的观点，让人重新思考人类的过去和未来。</p>
+                            <div class="book-rating">★★★★★</div>
+                            <a href="#" class="read-more">历史长河</a>
                         </div>
                     </div>
-                    <div class="book-card">
-                        <div class="book-cover">
-                            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=200&h=300&fit=crop" alt="未来简史封面">
-                        </div>
+                    <div class="book-card" data-category="history">
                         <div class="book-info">
-                            <h3>未来简史</h3>
-                            <p class="book-author">尤瓦尔·赫拉利</p>
-                            <p class="book-summary">探讨人类未来可能的发展方向，思考人工智能、生物科技等新兴技术对人类社会的影响。</p>
-                            <a href="#" class="read-more">阅读更多</a>
+                            <div class="book-category">历史</div>
+                            <h3>万历十五年</h3>
+                            <p class="book-author">黄仁宇</p>
+                            <p class="book-summary">大历史观的经典之作，通过1587年这个看似平淡的年份，揭示大明帝国走向衰落的深层原因。历史写作的典范。</p>
+                            <div class="book-rating">★★★★★</div>
+                            <a href="#" class="read-more">历史洞察</a>
                         </div>
+                    </div>
+                    <div class="book-card" data-category="literature">
+                        <div class="book-info">
+                            <div class="book-category">文学</div>
+                            <h3>百年孤独</h3>
+                            <p class="book-author">加西亚·马尔克斯</p>
+                            <p class="book-summary">魔幻现实主义的巅峰之作，在孤独与宿命中寻找生命的意义。布恩迪亚家族七代人的传奇，拉丁美洲的百年沧桑。</p>
+                            <div class="book-rating">★★★★★</div>
+                            <a href="#" class="read-more">文学世界</a>
+                        </div>
+                    </div>
+                    <div class="book-card" data-category="literature">
+                        <div class="book-info">
+                            <div class="book-category">文学</div>
+                            <h3>1984</h3>
+                            <p class="book-author">乔治·奥威尔</p>
+                            <p class="book-summary">反乌托邦文学的经典，对极权主义的深刻批判。在信息时代重读，更觉其预见性和警示意义。</p>
+                            <div class="book-rating">★★★★★</div>
+                            <a href="#" class="read-more">思想启蒙</a>
+                        </div>
+                    </div>
+                    <div class="book-card" data-category="economics">
+                        <div class="book-info">
+                            <div class="book-category">经济</div>
+                            <h3>思考，快与慢</h3>
+                            <p class="book-author">丹尼尔·卡尼曼</p>
+                            <p class="book-summary">诺贝尔经济学奖得主的代表作，揭示人类思维的两种系统。对理解决策偏差和行为经济学至关重要。</p>
+                            <div class="book-rating">★★★★★</div>
+                            <a href="#" class="read-more">思维科学</a>
+                        </div>
+                    </div>
+                    <div class="book-card" data-category="economics">
+                        <div class="book-info">
+                            <div class="book-category">经济</div>
+                            <h3>穷查理宝典</h3>
+                            <p class="book-author">查理·芒格</p>
+                            <p class="book-summary">巴菲特合伙人的智慧箴言录，跨学科思维模型的经典。关于投资、决策和人生的深刻洞见。</p>
+                            <div class="book-rating">★★★★★</div>
+                            <a href="#" class="read-more">智慧结晶</a>
+                        </div>
+                    </div>
+                    <div class="book-card" data-category="tech">
+                        <div class="book-info">
+                            <div class="book-category">科技</div>
+                            <h3>深度学习</h3>
+                            <p class="book-author">Ian Goodfellow</p>
+                            <p class="book-summary">深度学习领域的圣经，从基础理论到前沿应用全面覆盖。每个AI从业者都应该拥有的参考书。</p>
+                            <div class="book-rating">★★★★★</div>
+                            <a href="#" class="read-more">技术经典</a>
+                        </div>
+                    </div>
+                    <div class="book-card" data-category="tech">
+                        <div class="book-info">
+                            <div class="book-category">科技</div>
+                            <h3>算法导论</h3>
+                            <p class="book-author">Cormen等</p>
+                            <p class="book-summary">计算机算法的权威教材，从基础数据结构到高级算法设计。算法思维的系统训练，程序员必读经典。</p>
+                            <div class="book-rating">★★★★☆</div>
+                            <a href="#" class="read-more">算法基石</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="reading-stats">
+                    <div class="reading-stat">
+                        <strong>2024</strong>
+                        <span>今年目标</span>
+                    </div>
+                    <div class="reading-stat">
+                        <strong>32</strong>
+                        <span>已读数量</span>
+                    </div>
+                    <div class="reading-stat">
+                        <strong>8.5k</strong>
+                        <span>页数</span>
+                    </div>
+                    <div class="reading-stat">
+                        <strong>12</strong>
+                        <span>在读</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="travels" class="travels">
+        <section id="essays" class="essays">
             <div class="container">
-                <h2>旅行笔记</h2>
-                <div class="travels-grid">
-                    <div class="travel-card">
-                        <div class="travel-image">
-                            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&h=250&fit=crop" alt="京都伏见稻荷大社">
+                <h2>随笔思考</h2>
+                <div class="essays-intro">
+                    <p>记录生活中的思考碎片，关于技术、关于阅读、关于人生。这些文字是我与自己和世界对话的方式。</p>
+                </div>
+                <div class="essays-grid">
+                    <div class="essay-card">
+                        <div class="essay-meta">
+                            <span class="essay-date">2024年3月15日</span>
+                            <span class="essay-category">技术思考</span>
                         </div>
-                        <div class="travel-info">
-                            <h3>京都漫步：千年古都的秋日诗意</h3>
-                            <p class="travel-date">2024年3月8日-12日</p>
-                            <p class="travel-summary">五天的京都之旅，从伏见稻荷大社的千本鸟居到清水寺的壮丽景色，深度体验日本传统文化。</p>
-                            <a href="travels/sample-travel.html" class="read-more">阅读更多</a>
-                        </div>
+                        <h3>算法工程师的数学直觉</h3>
+                        <p class="essay-summary">为什么数学背景对算法工程师如此重要？不是因为我们需要手动推导公式，而是因为数学训练培养了一种直觉——一种对问题本质的洞察力。当我们面对一个复杂的业务问题时，数学直觉能帮助我们快速识别问题的结构，选择合适的工具...</p>
+                        <a href="#" class="read-more">阅读全文</a>
                     </div>
-                    <div class="travel-card">
-                        <div class="travel-image">
-                            <img src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=400&h=250&fit=crop" alt="巴黎埃菲尔铁塔">
+                    <div class="essay-card">
+                        <div class="essay-meta">
+                            <span class="essay-date">2024年3月8日</span>
+                            <span class="essay-category">读书笔记</span>
                         </div>
-                        <div class="travel-info">
-                            <h3>巴黎记忆：浪漫之都的艺术之旅</h3>
-                            <p class="travel-date">2024年2月14日-20日</p>
-                            <p class="travel-summary">在巴黎的街头漫步，从卢浮宫到埃菲尔铁塔，感受这座城市的浪漫与艺术气息。</p>
-                            <a href="#" class="read-more">阅读更多</a>
+                        <h3>重读《人类简史》：技术革命的反思</h3>
+                        <p class="essay-summary">第二次读《人类简史》，这次更关注赫拉利对技术革命的论述。从认知革命到农业革命，再到科学革命，每一次技术变革都深刻改变了人类社会的组织形式。今天的AI革命，会不会是下一次的转折点？...</p>
+                        <a href="#" class="read-more">阅读全文</a>
+                    </div>
+                    <div class="essay-card">
+                        <div class="essay-meta">
+                            <span class="essay-date">2024年2月28日</span>
+                            <span class="essay-category">生活感悟</span>
                         </div>
+                        <h3>在信息洪流中保持深度思考</h3>
+                        <p class="essay-summary">我们生活在一个信息爆炸的时代，每天被无数的通知、推送、热点包围。但真正有价值的思考，往往需要长时间的专注和沉淀。如何在碎片化时代保持深度思考的能力？这是我一直在探索的问题...</p>
+                        <a href="#" class="read-more">阅读全文</a>
+                    </div>
+                    <div class="essay-card">
+                        <div class="essay-meta">
+                            <span class="essay-date">2024年2月15日</span>
+                            <span class="essay-category">技术思考</span>
+                        </div>
+                        <h3>从第一性原理看机器学习</h3>
+                        <p class="essay-summary">马斯克推崇的第一性原理思维，在机器学习领域同样适用。当我们不再满足于调参和套用模型，而是追问"为什么"，就能触及算法的本质。这篇文章分享我如何用第一性原理重新理解几个经典算法...</p>
+                        <a href="#" class="read-more">阅读全文</a>
+                    </div>
+                    <div class="essay-card">
+                        <div class="essay-meta">
+                            <span class="essay-date">2024年1月20日</span>
+                            <span class="essay-category">读书笔记</span>
+                        </div>
+                        <h3>《思考，快与慢》与算法设计</h3>
+                        <p class="essay-summary">卡尼曼对人类思维两种系统的划分，给了我设计推荐算法的新启发。人类的快思考对应着直觉和启发式，慢思考对应着理性分析。如何让AI系统也能模拟这种双系统思维？...</p>
+                        <a href="#" class="read-more">阅读全文</a>
+                    </div>
+                    <div class="essay-card">
+                        <div class="essay-meta">
+                            <span class="essay-date">2024年1月5日</span>
+                            <span class="essay-category">生活感悟</span>
+                        </div>
+                        <h3>2024：在不确定中寻找确定</h3>
+                        <p class="essay-summary">新的一年，技术变革加速，世界充满不确定性。但有些东西是确定的：持续学习的习惯、深度思考的能力、与人真诚连接的愿望。这些才是应对变化的根本...</p>
+                        <a href="#" class="read-more">阅读全文</a>
                     </div>
                 </div>
             </div>
@@ -115,21 +507,37 @@
     <footer id="contact" class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>联系方式</h3>
-                    <p>邮箱: caigx13@163.com</p>
-                    <p>微信: gxc_ai</p>
+                <div class="footer-section footer-about">
+                    <h3>关于我</h3>
+                    <p>AI算法工程师，数学爱好者，终身学习者。</p>
+                    <p>热爱用技术解决复杂问题，用阅读丰富内心世界。</p>
+                    <div class="social-links">
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
-                <div class="footer-section">
+                <div class="footer-section footer-links">
                     <h3>快速链接</h3>
-                    <p><a href="#books">读书心得</a></p>
-                    <p><a href="#travels">旅行笔记</a></p>
+                    <ul>
+                        <li><a href="#tech">技术思考</a></li>
+                        <li><a href="#reading">读书笔记</a></li>
+                        <li><a href="#essays">随笔</a></li>
+                        <li><a href="#about">关于我</a></li>
+                    </ul>
                 </div>
-                <div class="footer-section">
-                    <h3>关于</h3>
-                    <p>&copy; 2026 gxc.ai</p>
-                    <p>用心分享，真诚交流</p>
+                <div class="footer-section footer-contact">
+                    <h3>联系方式</h3>
+                    <p>📧 邮箱：caigx13@163.com</p>
+                    <p>📱 微信：gxc_ai</p>
+                    <p>💼 职业：AI算法工程师</p>
+                    <p>📍 地点：中国</p>
                 </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024-2026 gxc.ai · 用代码和文字记录思考</p>
+                <p class="footer-quote">"Stay hungry, stay foolish." — Steve Jobs</p>
             </div>
         </div>
     </footer>
