@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深度学习前沿 - gxc.ai</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="../index.html">gxc.ai</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">关于我</a></li>
+                <li><a href="../index.html#tech">技术</a></li>
+                <li><a href="../index.html#reading">读书</a></li>
+                <li><a href="../index.html#essays">随笔</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="book-post">
+        <a href="../index.html#tech" class="back-to-books">← 返回技术文章</a>
+        
+        <div class="book-post-header">
+            <h1>深度学习前沿</h1>
+            <div class="book-meta">
+                <span><i class="fas fa-calendar"></i> 2024年3月</span>
+                <span><i class="fas fa-tag"></i> 技术思考</span>
+            </div>
+        </div>
+
+        <div class="book-content">
+            <h2>🤖 Transformer的数学本质</h2>
+            <p>Transformer架构的出现，可以说是深度学习领域的一次"文艺复兴"。它不仅仅是一个新的模型结构，更是对序列数据处理思维的一次彻底革新。</p>
+            
+            <p>自注意力机制的核心其实很简单——让序列中的每个元素都能"看到"其他所有元素。这种设计打破了RNN的时序依赖桎梏，让模型能够并行处理整个序列。但这背后的数学原理却相当精妙：通过查询(Query)、键(Key)、值(Value)三个矩阵的交互，实现了对序列内部复杂关系的建模。</p>
+
+            <h2>🚀 从BERT到GPT的演进逻辑</h2>
+            <p>如果说BERT是"专注倾听"的模型，那么GPT就是"滔滔不绝"的讲述者。两种架构的差异不仅仅是预训练任务的不同，更体现了对语言理解的不同哲学。</p>
+            
+            <p>BERT通过掩码语言模型学会了"填空"，这种双向注意力让它能够深入理解上下文。而GPT通过自回归学会了"续写"，这种单向注意力让它能够生成连贯的文本。有趣的是，这两种看似对立的方法，在实际应用中往往能够互补。</p>
+
+            <h2>🔍 大语言模型的技术挑战</h2>
+            <p>当模型参数达到千亿级别时，很多传统算法都失效了。分布式训练的复杂性、内存管理的挑战、推理速度的瓶颈，每一个都是横亘在工程师面前的大山。</p>
+            
+            <p>但正是这些挑战催生了技术创新。比如混合精度训练在保持模型精度的同时大幅提升了训练速度；FlashAttention算法通过减少内存访问显著优化了注意力计算；而参数量化技术则在模型大小和推理性能之间找到了平衡点。</p>
+
+            <h2>💡 思考与展望</h2>
+            <p>深度学习的快速发展让我既兴奋又忧虑。兴奋的是技术创新的速度，忧虑的是我们是否真正理解了这些模型的工作原理。</p>
+            
+            <p>作为一名算法工程师，我认为技术本身并不是终极目标。真正的价值在于如何利用这些技术解决实际问题，推动人类社会的发展。毕竟，工具再强大，关键还是看使用它的人。</p>
+        </div>
+    </main>
+</body>
+</html>

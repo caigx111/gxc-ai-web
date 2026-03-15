@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图神经网络应用 - gxc.ai</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="../index.html">gxc.ai</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">关于我</a></li>
+                <li><a href="../index.html#tech">技术</a></li>
+                <li><a href="../index.html#reading">读书</a></li>
+                <li><a href="../index.html#essays">随笔</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="book-post">
+        <a href="../index.html#tech" class="back-to-books">← 返回技术文章</a>
+        
+        <div class="book-post-header">
+            <h1>图神经网络应用</h1>
+            <div class="book-meta">
+                <span><i class="fas fa-calendar"></i> 2023年12月</span>
+                <span><i class="fas fa-tag"></i> 技术思考</span>
+            </div>
+        </div>
+
+        <div class="book-content">
+            <h2>🕸️ 图数据的独特魅力</h2>
+            <p>我们生活在一个充满关联的世界里。社交网络中的朋友关系、金融交易中的资金流向、知识图谱中的概念连接，这些都是图数据的典型例子。传统的深度学习方法在处理这种结构化数据时往往力不从心。</p>
+            
+            <p>图神经网络(GNN)的出现解决了这个问题。它让每个节点能够聚合邻居节点的信息，就像在社交网络中我们会受到朋友观点的影响一样。这种设计既直观又有效。</p>
+
+            <h2>🔄 从GCN到GraphSAGE的演进</h2>
+            <p>GCN是最早的图神经网络之一，它的核心思想是通过拉普拉斯矩阵进行图卷积。但GCN有一个限制——它需要整个图的邻接矩阵，这对于大规模图来说是个问题。</p>
+            
+            <p>GraphSAGE通过采样邻居节点解决了这个问题。它让每个节点只考虑一部分邻居，而不是所有邻居。这种"抽样调查"的方式虽然在理论上损失了一些信息，但在实践中却能够处理更大的图，而且效果往往更好。</p>
+
+            <h2>👥 社交网络分析实践</h2>
+            <p>在一个社交网络项目中，我用GNN来识别关键影响者。传统的算法可能只考虑用户的粉丝数量，但GNN能够考虑更复杂的因素——比如用户的影响力、内容的传播路径、社区的聚集程度等。</p>
+            
+            <p>最让我惊喜的是，GNN发现了一些"隐形影响者"。这些用户粉丝数量不多，但他们在网络中处于关键位置，他们的观点往往能够影响整个社区的讨论方向。这种洞察是传统方法难以发现的。</p>
+
+            <h2>🧠 知识图谱构建</h2>
+            <p>知识图谱是另一个GNN大放异彩的领域。在一个企业知识图谱项目中，我们用GNN来发现实体间的隐含关系。比如，系统自动发现"某研究人员"和"某技术"之间存在"专家"关系，即使这种关系在原始数据中没有明确标注。</p>
+            
+            <p>这种能力让知识图谱变得更加智能。它不仅仅是存储已知的事实，还能够推理和发现新的事实。这对于智能搜索、问答系统等应用非常有价值。</p>
+
+            <h2>💡 技术挑战与思考</h2>
+            <p>图神经网络虽然强大，但也面临很多挑战。首先是可解释性问题——GNN做出决策的过程往往是一个黑盒子，这在金融、医疗等需要高度透明度的领域是个问题。</p>
+            
+            <p>其次是图规模的挑战。随着图的增大，计算复杂度呈指数级增长。虽然有很多优化技术，但这仍然是限制GNN应用的主要因素之一。</p>
+            
+            <p>但无论如何，图神经网络为我们处理复杂关联数据提供了强有力的工具。在一个万物互联的时代，理解关系的价值比理解孤立个体更重要。</p>
+        </div>
+    </main>
+</body>
+</html>
