@@ -184,7 +184,7 @@
                 <div class="tech-intro">
                     <p>在算法的世界里，我不仅仅是在写代码，更是在用数学的精确性去理解世界的复杂性。这里记录我在技术道路上的思考、探索和感悟。</p>
                 </div>
-                <div class="tech-grid">
+                <div class="tech-grid" id="techGrid">
                     <div class="tech-card">
                         <div class="tech-icon">
                             <i class="fas fa-brain"></i>
@@ -252,6 +252,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="pagination" id="techPagination"></div>
             </div>
         </section>
 
@@ -633,6 +634,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="pagination" id="booksPagination"></div>
             </div>
         </section>
 
@@ -642,7 +644,7 @@
                 <div class="essays-intro">
                     <p>记录生活中的思考碎片，关于技术、关于阅读、关于人生。这些文字是我与自己和世界对话的方式。</p>
                 </div>
-                <div class="essays-grid">
+                <div class="essays-grid" id="essaysGrid">
                     <div class="essay-card">
                         <div class="essay-meta">
                             <span class="essay-date">2024年3月15日</span>
@@ -698,6 +700,7 @@
                         <a href="essays/2024：在不确定中寻找确定.html" class="read-more">阅读全文</a>
                     </div>
                 </div>
+                <div class="pagination" id="essaysPagination"></div>
             </div>
         </section>
     </main>
@@ -740,6 +743,159 @@
         </div>
     </footer>
 
+    <script>
+        // 分页功能
+        const ITEMS_PER_PAGE = 10;
+        
+        // 技术思考分页
+        function initTechPagination() {
+            const grid = document.getElementById('techGrid');
+            const pagination = document.getElementById('techPagination');
+            const items = Array.from(grid.children);
+            const totalPages = Math.ceil(items.length / ITEMS_PER_PAGE);
+            let currentPage = 1;
+            
+            function showPage(page) {
+                items.forEach((item, index) => {
+                    item.style.display = (index >= (page - 1) * ITEMS_PER_PAGE && index < page * ITEMS_PER_PAGE) ? 'flex' : 'none';
+                });
+                updatePaginationButtons();
+            }
+            
+            function updatePaginationButtons() {
+                let html = '';
+                if (totalPages > 1) {
+                    html += `<button class="page-btn ${currentPage === 1 ? 'disabled' : ''}" onclick="changeTechPage(${currentPage - 1})">上一页</button>`;
+                    for (let i = 1; i <= totalPages; i++) {
+                        html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="changeTechPage(${i})">${i}</button>`;
+                    }
+                    html += `<button class="page-btn ${currentPage === totalPages ? 'disabled' : ''}" onclick="changeTechPage(${currentPage + 1})">下一页</button>`;
+                }
+                pagination.innerHTML = html;
+            }
+            
+            window.changeTechPage = function(page) {
+                if (page < 1 || page > totalPages) return;
+                currentPage = page;
+                showPage(currentPage);
+                grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            };
+            
+            showPage(1);
+        }
+        
+        // 读书笔记分页
+        function initBooksPagination() {
+            const grid = document.getElementById('booksGrid');
+            const pagination = document.getElementById('booksPagination');
+            let currentCategory = 'all';
+            let currentPage = 1;
+            
+            function getFilteredItems() {
+                const items = Array.from(grid.children);
+                if (currentCategory === 'all') return items;
+                return items.filter(item => item.dataset.category === currentCategory);
+            }
+            
+            function showPage(page) {
+                const items = getFilteredItems();
+                const totalPages = Math.ceil(items.length / ITEMS_PER_PAGE);
+                
+                // 先隐藏所有
+                Array.from(grid.children).forEach(item => item.style.display = 'none');
+                
+                // 显示当前页的项目
+                items.forEach((item, index) => {
+                    if (index >= (page - 1) * ITEMS_PER_PAGE && index < page * ITEMS_PER_PAGE) {
+                        item.style.display = 'flex';
+                    }
+                });
+                
+                updatePaginationButtons(totalPages);
+            }
+            
+            function updatePaginationButtons(totalPages) {
+                let html = '';
+                if (totalPages > 1) {
+                    html += `<button class="page-btn ${currentPage === 1 ? 'disabled' : ''}" onclick="changeBooksPage(${currentPage - 1})">上一页</button>`;
+                    for (let i = 1; i <= totalPages; i++) {
+                        html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="changeBooksPage(${i})">${i}</button>`;
+                    }
+                    html += `<button class="page-btn ${currentPage === totalPages ? 'disabled' : ''}" onclick="changeBooksPage(${currentPage + 1})">下一页</button>`;
+                }
+                pagination.innerHTML = html;
+            }
+            
+            window.changeBooksPage = function(page) {
+                const items = getFilteredItems();
+                const totalPages = Math.ceil(items.length / ITEMS_PER_PAGE);
+                if (page < 1 || page > totalPages) return;
+                currentPage = page;
+                showPage(currentPage);
+                grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            };
+            
+            // 重写filterBooks函数以支持分页
+            window.filterBooks = function(category) {
+                currentCategory = category;
+                currentPage = 1;
+                
+                // 更新分类按钮状态
+                document.querySelectorAll('.category').forEach(cat => {
+                    cat.classList.remove('active');
+                });
+                event.target.closest('.category').classList.add('active');
+                
+                showPage(1);
+            };
+            
+            showPage(1);
+        }
+        
+        // 随笔分页
+        function initEssaysPagination() {
+            const grid = document.getElementById('essaysGrid');
+            const pagination = document.getElementById('essaysPagination');
+            const items = Array.from(grid.children);
+            const totalPages = Math.ceil(items.length / ITEMS_PER_PAGE);
+            let currentPage = 1;
+            
+            function showPage(page) {
+                items.forEach((item, index) => {
+                    item.style.display = (index >= (page - 1) * ITEMS_PER_PAGE && index < page * ITEMS_PER_PAGE) ? 'flex' : 'none';
+                });
+                updatePaginationButtons();
+            }
+            
+            function updatePaginationButtons() {
+                let html = '';
+                if (totalPages > 1) {
+                    html += `<button class="page-btn ${currentPage === 1 ? 'disabled' : ''}" onclick="changeEssaysPage(${currentPage - 1})">上一页</button>`;
+                    for (let i = 1; i <= totalPages; i++) {
+                        html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="changeEssaysPage(${i})">${i}</button>`;
+                    }
+                    html += `<button class="page-btn ${currentPage === totalPages ? 'disabled' : ''}" onclick="changeEssaysPage(${currentPage + 1})">下一页</button>`;
+                }
+                pagination.innerHTML = html;
+            }
+            
+            window.changeEssaysPage = function(page) {
+                if (page < 1 || page > totalPages) return;
+                currentPage = page;
+                showPage(currentPage);
+                grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            };
+            
+            showPage(1);
+        }
+        
+        // 初始化所有分页
+        document.addEventListener('DOMContentLoaded', function() {
+            initTechPagination();
+            initBooksPagination();
+            initEssaysPagination();
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
