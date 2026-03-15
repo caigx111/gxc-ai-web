@@ -757,7 +757,7 @@
             
             function showPage(page) {
                 items.forEach((item, index) => {
-                    item.style.display = (index >= (page - 1) * ITEMS_PER_PAGE && index < page * ITEMS_PER_PAGE) ? 'flex' : 'none';
+                    item.style.display = (index >= (page - 1) * ITEMS_PER_PAGE && index < page * ITEMS_PER_PAGE) ? 'block' : 'none';
                 });
                 updatePaginationButtons();
             }
@@ -862,7 +862,7 @@
             
             function showPage(page) {
                 items.forEach((item, index) => {
-                    item.style.display = (index >= (page - 1) * ITEMS_PER_PAGE && index < page * ITEMS_PER_PAGE) ? 'flex' : 'none';
+                    item.style.display = (index >= (page - 1) * ITEMS_PER_PAGE && index < page * ITEMS_PER_PAGE) ? 'block' : 'none';
                 });
                 updatePaginationButtons();
             }

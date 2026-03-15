@@ -1123,6 +1123,7 @@ body {
 }
 
 .essay-card {
+    display: block;
     background: white;
     padding: 2rem;
     border-radius: 12px;
