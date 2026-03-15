@@ -52,11 +52,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 20px;
     max-width: 1200px;
     margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .logo a {
@@ -1322,22 +1320,51 @@ body {
     .about-content {
         grid-template-columns: 1fr;
     }
+    
+    .tech-grid,
+    .books-grid,
+    .music-grid,
+    .essays-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 }
 
 @media (max-width: 768px) {
     .nav {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
     }
 
     .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: white;
         flex-direction: column;
-        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease;
+        box-shadow: var(--shadow-heavy);
+        z-index: 1000;
+        gap: 2rem;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        margin: 1rem 0;
     }
 
     .hero {
-        margin-top: 120px;
+        margin-top: 80px;
+        min-height: 90vh;
     }
 
     .hero-text h1 {
@@ -1373,22 +1400,49 @@ body {
     .book-card {
         flex-direction: column;
         text-align: center;
+        padding: 1rem;
+    }
+
+    .book-cover img {
+        width: 100px;
+        height: 150px;
     }
 
     .music-item {
         flex-direction: column;
         text-align: center;
+        padding: 1rem;
+    }
+
+    .tech-card {
+        padding: 1.5rem;
+    }
+
+    .essay-card {
+        padding: 1.5rem;
     }
 
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
     }
+    
+    h2 {
+        font-size: 2rem !important;
+    }
+    
+    h3 {
+        font-size: 1.5rem !important;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
 }
 
 @media (max-width: 480px) {
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .hero-subtitle {
@@ -1397,6 +1451,7 @@ body {
 
     .hero-content {
         padding: 0 15px;
+        gap: 2rem;
     }
 
     .container {
@@ -1411,6 +1466,40 @@ body {
     .tag {
         padding: 0.4rem 0.8rem;
         font-size: 0.8rem;
+    }
+    
+    .code-snippet {
+        padding: 1.5rem;
+    }
+    
+    .code-snippet pre {
+        font-size: 0.8rem;
+    }
+    
+    .book-card {
+        padding: 1rem;
+    }
+    
+    .book-cover img {
+        width: 80px;
+        height: 120px;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+    }
+    
+    .reading-categories {
+        gap: 0.5rem;
+    }
+    
+    .category {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .section {
+        padding: 60px 0;
     }
 }
 
